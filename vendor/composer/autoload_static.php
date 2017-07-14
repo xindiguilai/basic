@@ -19,6 +19,7 @@ class ComposerStaticInit5d1fb9e863fe6b307d7887d662aee31d
         array (
             'yii\\swiftmailer\\' => 16,
             'yii\\redis\\' => 10,
+            'yii\\imagine\\' => 12,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
             'yii\\debug\\' => 10,
@@ -84,6 +85,10 @@ class ComposerStaticInit5d1fb9e863fe6b307d7887d662aee31d
         'yii\\redis\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-redis',
+        ),
+        'yii\\imagine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-imagine',
         ),
         'yii\\gii\\' => 
         array (
@@ -203,6 +208,13 @@ class ComposerStaticInit5d1fb9e863fe6b307d7887d662aee31d
             'Prophecy\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+            ),
+        ),
+        'I' => 
+        array (
+            'Imagine' => 
+            array (
+                0 => __DIR__ . '/..' . '/imagine/imagine/lib',
             ),
         ),
         'H' => 
