@@ -7,13 +7,13 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
+$this->title = '登录';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+    <p>请填写以下字段登录:</p>
 
     <?php $form = ActiveForm::begin([
         'id' => 'login-form',
