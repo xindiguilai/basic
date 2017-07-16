@@ -40,9 +40,9 @@ class Country extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'code' => 'Code',
-            'name' => 'Name',
-            'population' => 'Population',
+            'code' => '编码',
+            'name' => '名称',
+            'population' => '人口',
         ];
     }
 }

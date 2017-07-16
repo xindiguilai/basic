@@ -9,20 +9,28 @@ use app\models\Country;
 use app\models\CountrySearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 
 class CountryController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'create', 'delete', 'update', 'view'],    //only中没有指定的动作，将无条件获取授权
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index','view'],
+                        'roles' => ['?'],   //未登陆用户
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['create', 'update', 'delete', 'view', 'index'],
+                        'roles' => ['@'],   //已登录用户
+                    ],
                 ],
             ],
         ];
